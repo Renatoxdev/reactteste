@@ -1,0 +1,82 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 98%;
+  max-width: 1920px; /* largura máxima do conteúdo */
+  margin: 0 auto;    /* centraliza horizontalmente */
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* ===== Responsividade ===== */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Telas pequenas */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    display: none; /* escondido por padrão */
+  }
+
+  nav ul.show {
+    display: flex; /* mostrado quando o estado React ativar */
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    padding: 10px 20px;
+  }
+}
+
+/* Evita que o conteúdo fique escondido atrás da navbar fixa */
+main {
+  padding-top: 60px; /* ajuste para a altura real da navbar */
+}

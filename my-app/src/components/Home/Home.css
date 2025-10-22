@@ -1,0 +1,52 @@
+.home-container {
+  max-width: 900px;       
+  margin: 80px auto 40px; 
+  padding: 0 20px;        
+  font-family: 'Arial', sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Título */
+.home-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+
+.home-container p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+
+@media (max-width: 768px) {
+  .home-container {
+    margin: 60px 15px 20px;
+  }
+
+  .home-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .home-container p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    margin: 50px 10px 15px;
+  }
+
+  .home-container h2 {
+    font-size: 1.4rem;
+  }
+
+  .home-container p {
+    font-size: 0.9rem;
+  }
+}
